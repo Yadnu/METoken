@@ -1,12 +1,14 @@
-pragma solidity ^0.8.20;
+// SPDX-License-Identifier: MIT
 
-import 'openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
+pragma solidity ^0.8.10;
+
+import '@openzeppelin-solidity/contracts/token/ERC20/SRC20.sol';
 
 contract METoken is StandardToken {
     string public constant name = 'Mastering Ethereum Token';
     string public constant symbol = 'MET';
     uint8 public constant decimals = 2;
-    uint constant _initial_supply = 2100000000;
+    uint constant _initial_supply = 210000000;
 
     function METoken() public {
         totalSupply_ = _initial_supply;
